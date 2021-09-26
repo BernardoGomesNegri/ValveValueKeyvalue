@@ -10,17 +10,19 @@ description: This is a package made to parse Valve's value-keyvalue format, comm
              extensions ".pop" or ".vtf". The main module is Text.ValveVKV. The main function you will be using is parseValveVKV.
 
 -- A URL where users can report bugs.
+homepage: https://github.com/BernardoGomesNegri/ValveValueKeyvalue
 bug-reports: https://github.com/BernardoGomesNegri/ValveValueKeyvalue/issues
 
 -- The license under which the package is released.
 license: MIT
+license-file: LICENSE
 author:             Bernardo Gomes Negri
 maintainer:         38192358+BernardoGomesNegri@users.noreply.github.com
 
 -- A copyright notice.
 -- copyright:
--- category:
-extra-source-files: CHANGELOG.md
+category: Parsing
+extra-source-files: CHANGELOG.md, README.md
 
 library
 
