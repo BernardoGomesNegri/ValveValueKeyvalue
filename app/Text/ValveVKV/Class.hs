@@ -34,6 +34,7 @@ context ^: name =
         _ -> Nothing
 infixl 5 ^:
 
+-- | A type synonim for ValveKeyValueEntry
 type Context = ValveKeyValueEntry
 
 
@@ -88,13 +89,3 @@ instance ValveVKV a => ValveVKV (NonEmpty a) where
             list :: ValveVKV a => Maybe [a]
             list = fromValveVKV entry context
 
-
-data My = My {name :: String, count :: Int, stuff :: [MyNot], a :: MyNot} deriving Show
-instance ValveVKV My where
-    fromValveVKV this _ =
-        My <$> this ^: "name" <*> this .: "count" <*> this .: "stuff" <*> this .: "a"
-
-data MyNot = MyNot {name2 :: String, count2 :: Int} deriving Show
-instance ValveVKV MyNot where
-    fromValveVKV this _ =
-        MyNot <$> this ^: "name" <*> this .: "count"

@@ -16,7 +16,7 @@ bug-reports: https://github.com/BernardoGomesNegri/ValveValueKeyvalue/issues
 license: MIT
 license-file: LICENSE
 author:             Bernardo Gomes Negri
-maintainer:         38192358+BernardoGomesNegri@users.noreply.github.com
+maintainer:         b.gomes.negri@gmail.com
 
 category: Parsing
 extra-source-files: CHANGELOG.md, README.md
