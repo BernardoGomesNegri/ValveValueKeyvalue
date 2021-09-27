@@ -1,4 +1,5 @@
-module Text.ValveVKV(vkvParser, parseValveVKV, ValveKeyValueEntry, Pair, fromValveVKV, (.:), (^:), unpair) where
+module Text.ValveVKV(vkvParser, parseValveVKV, fromValveVKV, (.:), (^:), unpair, ValveVKV,
+    ValveKeyValueEntry(KVObject, KVInt, KVString), Pair (Pair)) where
 -- Library for processing Valve's value keyvalue format. The main function you will wish to use is parseValveVKV. To convert it into your own type, you
 -- will need to write a 'ValveVKV' instance for it.
 
@@ -7,7 +8,7 @@ import Text.ValveVKV.Internal
 import Text.ValveVKV.Class
 import Data.Maybe (mapMaybe)
 
-
+-- | The main function you will be using. Turns the ValveVKV string into a type that has the 'ValveVKV' typeclass.
 parseValveVKV :: ValveVKV a => String -> Maybe a
 parseValveVKV input =
     let parseRes = parse vkvParser "" input in

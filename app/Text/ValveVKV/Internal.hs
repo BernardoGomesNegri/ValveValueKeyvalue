@@ -101,6 +101,7 @@ kvIntParse = do
         Just x -> return $ KVInt $ Pair name x
         Nothing -> fail ""
 
+-- | The Parsec parser itself.
 vkvParser :: Parsec String () [ValveKeyValueEntry]
 vkvParser =
     many1 entryParser

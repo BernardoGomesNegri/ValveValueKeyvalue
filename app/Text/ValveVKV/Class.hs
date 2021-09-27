@@ -16,6 +16,7 @@ findFromName (KVObject (Pair _ stuff)) name =
         finder this@(KVInt (Pair thisname s)) = if thisname == name then Just this else Nothing
 findFromName _ _ = []
 
+-- | This operator receives an entry on the left side and a string on the right side. It tries to find the string subentry named the string inside the entry you gave in on the left.
 (.:) :: ValveVKV a => ValveKeyValueEntry -> String -> Maybe a 
 context .: name =
     let results = findFromName context name in
@@ -24,6 +25,7 @@ context .: name =
         x:_ -> fromValveVKV x context
 infixl 5 .:
 
+-- | This operator receives an entry on the left side and a string on the right side. It tries to find the subentry named the string inside the entry you gave in on the left.
 (^:) :: ValveKeyValueEntry -> String -> Maybe String
 context ^: name =
     let results = findFromName context name in
@@ -44,9 +46,10 @@ type Context = ValveKeyValueEntry
 -- @
 -- instance ValveVKV My where
 --     fromValveVKV this _ =
---         My <$> this ^: "name" <*> this .: "count"
+--         My \<$\> this ^: "name" \<*\> this .: "count"
 -- @
 class ValveVKV a where
+    -- | The first argument is the entry that should be turned into the type. The second argument is the entry just above that.
     fromValveVKV :: ValveKeyValueEntry -> Context -> Maybe a
 
 instance ValveVKV Int where
