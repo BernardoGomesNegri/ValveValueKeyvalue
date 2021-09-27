@@ -1,6 +1,6 @@
 cabal-version:      2.4
 name:               ValveValueKeyvalue
-version:            0.1.0.0
+version:            1.0.0.0
 
 -- A short (one-line) description of the package.
 synopsis: A Valve Value-keyvalue parser for Haskell made with Parsec.
@@ -19,6 +19,10 @@ license-file: LICENSE
 author:             Bernardo Gomes Negri
 maintainer:         38192358+BernardoGomesNegri@users.noreply.github.com
 
+source-repository head
+    type: git
+    location: https://github.com/BernardoGomesNegri/ValveValueKeyvalue
+
 -- A copyright notice.
 -- copyright:
 category: Parsing
@@ -33,7 +37,7 @@ library
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
-    build-depends:    base ^>=4.14.2.0
-    build-depends:    parsec
+    build-depends:    base ^>= 4.14.2.0
+    build-depends:    parsec >= 3.1.14 && < 3.2
     hs-source-dirs:   app
     default-language: Haskell2010
