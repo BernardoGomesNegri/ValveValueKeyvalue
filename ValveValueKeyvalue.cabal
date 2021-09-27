@@ -6,8 +6,7 @@ version:            1.0.0.0
 synopsis: A Valve Value-keyvalue parser for Haskell made with Parsec.
 
 -- A longer description of the package.
-description: This is a package made to parse Valve's value-keyvalue format, common in Source Engine games. Valve value-keyvalue files may take the
-             extensions ".pop" or ".vtf". The main module is Text.ValveVKV. The main function you will be using is parseValveVKV.
+description: This is a package made to parse Valve's value-keyvalue format, common in Source Engine games. Valve value-keyvalue files may take the extensions ".pop" or ".vtf". The main module is Text.ValveVKV. The main function you will be using is parseValveVKV.
 
 -- A URL where users can report bugs.
 homepage: https://github.com/BernardoGomesNegri/ValveValueKeyvalue
@@ -19,14 +18,12 @@ license-file: LICENSE
 author:             Bernardo Gomes Negri
 maintainer:         38192358+BernardoGomesNegri@users.noreply.github.com
 
+category: Parsing
+extra-source-files: CHANGELOG.md, README.md
+
 source-repository head
     type: git
     location: https://github.com/BernardoGomesNegri/ValveValueKeyvalue
-
--- A copyright notice.
--- copyright:
-category: Parsing
-extra-source-files: CHANGELOG.md, README.md
 
 library
 
