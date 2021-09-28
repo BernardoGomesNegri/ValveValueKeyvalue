@@ -1,3 +1,4 @@
+# This only works if you have 7-Zip installed, on your path and are running on Windows
 $version = "1.0.0.0"
 cabal sdist -o ".\out"
 cabal haddock --builddir=".\out" --haddock-for-hackage --enable-doc
