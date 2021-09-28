@@ -1,3 +1,11 @@
-ghc ".\app\Main.hs" -o ".\out\valvekeyvalue.exe"
-Remove-Item ".\app\Main.hi"
-Remove-Item ".\app\Main.o"
+$version = "1.0.0.0"
+cabal sdist -o ".\out"
+cabal haddock --builddir=".\out" --haddock-for-hackage --enable-doc
+Remove-Item ".\out\build" -Recurse
+Remove-Item ".\out\cache" -Recurse
+Remove-Item ".\out\packagedb" -Recurse
+Remove-Item ".\out\tmp" -Recurse
+$docs = ".\out\ValveValueKeyvalue-" + $version + "-docs.tar.gz"
+$command = "7z.exe e " + $docs + " -y -oout -tgzip"
+Invoke-Expression $command
+Remove-Item $docs
