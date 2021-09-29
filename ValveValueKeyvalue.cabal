@@ -20,7 +20,7 @@ maintainer:         b.gomes.negri@gmail.com
 
 category: Parsing
 extra-source-files: CHANGELOG.md, README.md
-tested-with:    GHC ==8.10.5 || ==9.0.1 
+tested-with:    GHC ==8.10.5 || ==8.10.7
 
 source-repository head
     type: git
