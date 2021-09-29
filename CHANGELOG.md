@@ -12,3 +12,4 @@
 
 * Updated documentation
 * Changed export order so haddock makes better documentation
+* Added tested-with in cabal file
