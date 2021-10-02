@@ -1,4 +1,4 @@
-module Text.ValveVKV(parseValveVKV, parseToVKV, fromValveVKV, (.:), (^:), vkvParser, unpair, ValveVKV,
+module Text.ValveVKV(parseValveVKV, parseToVKV, fromValveVKV, (.:), (^:), unpair, ValveVKV,
     ValveKeyValueEntry(KVObject, KVInt, KVString), Pair (Pair), Context) where
 -- Library for processing Valve's value keyvalue format. The main function you will wish to use is parseValveVKV. To convert it into your own type, you
 -- will need to write a 'ValveVKV' instance for it.
