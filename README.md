@@ -19,3 +19,5 @@ a = do
     return $ parseValveVKV contents
 ```
 This will open file "file.txt", read its contents and return the "My" type.
+
+Avaliable on [Hackage](https://hackage.haskell.org/package/ValveValueKeyvalue)
