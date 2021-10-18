@@ -8,9 +8,11 @@
 
 * Added parseToVKV function and added some documentation
 
-## newver -- yyyy-mm-dd
+## 1.1.0.0 -- yyyy-mm-dd
 
+* Changed class to use Either
 * Updated documentation
 * Changed export order so haddock makes better documentation
 * Added tested-with in cabal file
-* No longer exports vkvParser
+* Changed list instance of ValveVKV to always return Right. In case no items are found, return Right []. To get a list that is certain to not be empty, use NonEmpty from the Data.List.NonEmpty module in base
+* Fixed example in readme

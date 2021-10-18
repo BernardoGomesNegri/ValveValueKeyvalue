@@ -13,7 +13,7 @@ The entry type ValveKeyValueEntry has 3 constructors. KVObject, which has a Pair
 
 So you can now run
 ```
-a :: IO My
+a :: IO (Either String My)
 a = do
     contents <- readFile "file.txt"
     return $ parseValveVKV contents
